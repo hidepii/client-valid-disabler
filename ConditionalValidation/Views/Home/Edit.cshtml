@@ -1,0 +1,21 @@
+﻿@model ConditionalValidation.Models.Home.EditModel
+@using ConditionalValidation
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm())
+{
+    using (Html.BeginDisableClientSideValidation())
+    {
+        @Html.EditorFor(m => m.PendingRequest)
+
+    }
+
+
+
+
+    <input type="submit" name="Save" value="Save" />
+}
